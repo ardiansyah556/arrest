@@ -9,14 +9,14 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "../dist/public"
+        "distDir": "dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/src/main/java/com/example/demo/DemoApplication.java"
+      "dest": "pom.xml"
     },
     {
       "handle": "filesystem"
