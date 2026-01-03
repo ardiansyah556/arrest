@@ -9,8 +9,7 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "installCommand": "npm install --legacy-peer-deps",
-        "buildCommand": "npm run build && ls -laR",
+        "buildCommand": "npm install --legacy-peer-deps && npm run build && ls -laR",
         "outputDirectory": "dist"
       }
     }
