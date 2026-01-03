@@ -9,8 +9,8 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "installCommand": "pnpm install",
-        "buildCommand": "pnpm build && ls -laR",
+        "installCommand": "npm install --legacy-peer-deps",
+        "buildCommand": "npm run build && ls -laR",
         "outputDirectory": "dist"
       }
     }
