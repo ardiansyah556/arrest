@@ -10,7 +10,7 @@
       "use": "@vercel/static-build",
       "config": {
         "installCommand": "pnpm install",
-        "buildCommand": "pnpm build",
+        "buildCommand": "pnpm build && ls -laR",
         "outputDirectory": "dist"
       }
     }
