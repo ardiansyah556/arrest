@@ -1,10 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
-
-/* Import Google Fonts for the design */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap');
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -147,10 +145,10 @@
    * - Add responsive horizontal padding
    * - Set max-width for large screens
    *
-   * Usage: <div className="container">...</div>
+   * Usage: <div class="container">...</div>
    *
    * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
+   * <div class="max-w-6xl mx-auto px-4">...</div>
    */
   .container {
     width: 100%;
