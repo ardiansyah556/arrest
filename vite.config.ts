@@ -1,14 +1,8 @@
 import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react-swc";
-import { VitePWA } from "vite-plugin-pwa";
 
-const pwaOptions = {
-  registerType: "autoUpdate",
-  // Other PWA options...
-};
-
-const plugins = [react(), VitePWA(pwaOptions)];
+const plugins = [react()];
 export default defineConfig({
   plugins,
   resolve: {
