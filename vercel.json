@@ -7,13 +7,18 @@
     },
     {
       "src": "package.json",
-      "use": "@vercel/vite"
+      "use": "@vercel/static-build",
+      "config": {
+        "installCommand": "pnpm install",
+        "buildCommand": "pnpm build",
+        "outputDirectory": "dist"
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "pom.xml"
+      "dest": "/pom.xml"
     },
     {
       "handle": "filesystem"

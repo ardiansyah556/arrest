@@ -19,21 +19,14 @@ export default defineConfig({
     },
   },
   envDir: path.resolve(import.meta.dirname),
-  // The 'root' property is removed to avoid ambiguity in the Vercel build environment.
+  root: "client",
   build: {
-    // The output directory is set to 'dist' at the project root.
-    outDir: "dist",
+    outDir: "../dist",
     emptyOutDir: true,
-    rollupOptions: {
-      // Explicitly specify the entry point, as 'root' is no longer defined.
-      input: {
-        app: path.resolve(import.meta.dirname, "client/index.html"),
-      },
-    },
   },
   server: {
     port: 3000,
-    strictPort: false,
+    strictPort: false, // Will find next available port if 3000 is busy
     host: true,
     allowedHosts: [
       ".manuspre.computer",
