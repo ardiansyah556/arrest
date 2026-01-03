@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -10,21 +9,21 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/public"
+        "distDir": "../dist/public"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "pom.xml"
+      "dest": "/src/main/java/com/example/demo/DemoApplication.java"
     },
     {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/public/index.html"
+      "dest": "/index.html"
     }
   ]
 }
